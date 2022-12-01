@@ -1,3 +1,5 @@
+#Input: a horizontal transaction database D, a user-specified threshold minsup
+#Output: the set of frequent itemsets
 def Apriori(D,minsup):
     #Generate F1
     F=[]
