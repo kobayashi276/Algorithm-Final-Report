@@ -67,7 +67,7 @@ class Apriori
     {
         if (a.Count==0 || b.Count == 0)
         {
-            return null;
+            return new List<List<string>>();
         }
        // Console.WriteLine(a.Count + " " + b.Count);
         List<List<string>> result = new List<List<string>>();
