@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "3mM8VzK2+FC0pvfPGjoMF+wRjGpvF8rTXdmO/mthWbQEJiVGFU+6i5JaP01kwjpE+WFPJp+EL4S0mzgILSUpuQ==",
+  "dgSpecHash": "xrK19mksAhKgNd9XcKvMJ8FVw9MMF4LmP2zuDCrbYf53Ga4dYeZs1RH3XX6t64VC5/lHIJhyIsjl6eOKWq+tew==",
   "success": true,
-  "projectFilePath": "E:\\repo\\Algorithm-Final-Report\\Apriori_TID\\Apriori_TID\\Apriori_TID\\Apriori_TID.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "D:\\code\\giai_thuat_FINAL\\Apriori_TID\\Apriori_TID\\Apriori_TID\\Apriori_TID.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ACER\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.11\\microsoft.netcore.app.host.win-x64.6.0.11.nupkg.sha512",
+    "C:\\Users\\ACER\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.11\\microsoft.aspnetcore.app.ref.6.0.11.nupkg.sha512",
+    "C:\\Users\\ACER\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.11\\microsoft.windowsdesktop.app.ref.6.0.11.nupkg.sha512",
+    "C:\\Users\\ACER\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.11\\microsoft.netcore.app.ref.6.0.11.nupkg.sha512"
+  ],
   "logs": []
 }

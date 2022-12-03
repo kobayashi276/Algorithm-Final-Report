@@ -11,9 +11,9 @@ class Apriori_TID
             L = new List<List<string>>();
             for (int i = 0; i < D.Count; i++)
             {
-                if (D[i].Count >= minsup && !L.Contains(D[i]))
+                if (D[i].Count >= minsup && !contains(L, D[i]))
                 {
-                    Console.WriteLine("Added to L");
+                    //Console.WriteLine("Added to L");
                     L.Add(D[i]);
                 }
             }
@@ -23,11 +23,11 @@ class Apriori_TID
                     break;
                 }
             D = generate_intersection(L);
-            for (int i = 0; i < L.Count; i++)
-            {
-                Console.WriteLine(string.Join(",", L[i]));
-                Console.WriteLine();
-            }
+            //for (int i = 0; i < L.Count; i++)
+            //{
+            //    Console.WriteLine(string.Join(",", L[i]));
+            //    Console.WriteLine();
+            //}
             
         }
         return preL;
@@ -61,6 +61,27 @@ class Apriori_TID
         return result;
     }
 
+    static bool contains(List<List<string>> a, List<string> b)
+    {
+        bool result = false;
+        for (int i = 0; i < a.Count; i++)
+        {
+            int count = 0;
+            for (int j = 0; j < b.Count; j++)
+            {
+                if (a[i].Contains(b[j]))
+                {
+                    count++;
+                }
+            }
+            if (count== a[i].Count)
+            {
+                result = true;
+            }
+        }
+        return result;
+    }
+
     static void Main(string[] args)
     {
         List<List<string>> D = new List<List<string>>();
@@ -69,11 +90,12 @@ class Apriori_TID
         D.Add(new List<string> { "T3", "T5", "T6", "T7", "T8", "T9" });
         D.Add(new List<string> { "T2", "T4" });
         D.Add(new List<string> { "T1", "T8" });
-        Console.WriteLine(D.Contains(new List<string> { "T2", "T4" }));
-        //D = Apriori_TID_Function(D,2);
-        //for (int i=0; i<D.Count; i++)
-        //{
-        //    Console.WriteLine(string.Join(",", D[i]));
-        //}
+
+        //Console.WriteLine(contains(D, new List<string> { "T2", "T4" }));
+        D = Apriori_TID_Function(D,2);
+        for (int i=0; i<D.Count; i++)
+        {
+            Console.WriteLine(string.Join(",", D[i]));
+        }
     }
 }
