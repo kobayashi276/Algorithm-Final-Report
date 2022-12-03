@@ -1,16 +1,22 @@
+#Input: a horizontal transaction database D, a user-specified threshold minsup
+#Output: the set of frequent itemsets
 def Apriori_TID(D,minsup):
     L=[]
+    #Counting how many TID have each item, if below than minsup => remove
     while D!=[]:
-        preL = L
+        preL = L #Store the previous result
         L = []
         for d in D:
             if len(d)>=minsup and d not in L:
                 L.append(d)
         if L==[]:
             break
+        #Start intersection each other in list
         D=generate_intersection(L)
     return preL
-    
+
+#Input: list a
+#Output: a list which intersection each other
 def generate_intersection(a):
     result = []
     for i in range(0,len(a)-1):
