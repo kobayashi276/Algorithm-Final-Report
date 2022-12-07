@@ -15,9 +15,8 @@ def Eclat(R,minsup):
                         value_intersect = sorted(list(set(y) & set(yi)))
                         if len(value_intersect)>=minsup: #If X | Y is frequent
                             #Add X | Y to frequent extension of X
-                            E[key_intersect] = value_intersect 
-                        print(E)
-                    result = result | Eclat(E,minsup) #recursive call using current dataase E
+                            E[key_intersect] = value_intersect
+                    result = result | Eclat(E,minsup) #recursive call using current database E
             result = result | E
     return result
 
