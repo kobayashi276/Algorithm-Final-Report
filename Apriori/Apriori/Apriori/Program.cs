@@ -28,10 +28,9 @@ class Apriori
             F.Add(new List<String> { elements[i]});
         }
         List<List<string>> L = new List<List<string>>();
-        List<List<string>> preL = L;
+        List<List<string>> result = new List<List<string>>();
         while (F.Count !=0)
         {
-            preL = L;
             L = new List<List<string>>();
             //Console.WriteLine(F.Count);
             for (int i = 0; i < F.Count; i++)
@@ -49,6 +48,7 @@ class Apriori
                // Console.WriteLine(count);
                 if (count >= minsup){
                     L.Add( F[i] );
+                    result.Add(F[i]);
                 }
             }
             //Console.WriteLine("L count: " + L.Count);
@@ -59,7 +59,7 @@ class Apriori
             else F = Generate_Set(L, elements);
             //Console.WriteLine("preLL count: "+preL.Count);
         }
-        return preL;
+        return result;
         //Console.WriteLine(String.Join(",", F[4]));
     }
 
