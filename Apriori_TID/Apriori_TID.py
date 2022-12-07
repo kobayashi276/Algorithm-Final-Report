@@ -65,8 +65,6 @@ def Apriori_TID(D,minsup):
         for key_l, val_l in temp_L.items():
             if val_l>=minsup:
                 L[k][key_l] = val_l
-        print("K = " + str(k))
-        print(L[k])
         k = k + 1
     return L
 
