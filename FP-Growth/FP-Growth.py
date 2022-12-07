@@ -51,7 +51,6 @@ def FP_Growth(D,minsup):
         p = {key:val for key,val in p.items() if val>=minsup}
         pattern_tree_value[i] = p
         i=i+1
-    # print(pattern_tree_value)
 
     #start paring each items to each pattern tree
     pattern_tree = {}
@@ -102,7 +101,8 @@ def paring(a,b):
 #Output: item set of r
 def generate_subitemset(s,r):
     result = []
-    result.append(s[:r]) #store the min value
+    re
+                currentPos[j]=currentPos[j-sult.append(s[:r]) #store the min value
     #generate the list of position from 0 to r-1
     position = [i for i in range(0,len(s))]
     #current position to count
@@ -122,8 +122,7 @@ def generate_subitemset(s,r):
         #start to increase by 1
         if i!=r-1:
             currentPos[i]=currentPos[i]+1
-            for j in range(i+1,r):
-                currentPos[j]=currentPos[j-1]+1
+            for j in range(i+1,r):1]+1
         else:
             currentPos[i]=currentPos[i]+1
         #print(currentPos)
@@ -132,33 +131,7 @@ def generate_subitemset(s,r):
         for j in range(0,r):
             set.append(s[currentPos[j]])
         result.append(set)
-    return result
-    # current = [i for i in range(0,k)]
-    # result = []
-    # max = [i for i in range(len(a)-k,len(a))]
-    # # print(current)
-    # # print(max)
-    # result.append([a[i] for i in current])
-    # while (current!=max):
-    #     i=k-1
-    #     while i>=0:
-    #         if current[i]+1>max[i]:
-    #             i=i-1
-    #             print(current[i])
-    #             print(max[i])
-    #         else:
-    #             break
-    #     print(current)
-    #     if i<0:
-    #         print("stop while")
-    #         break
-    #     for j in range(i,len(current)):
-    #         current[j]=current[j]+1
-    #         # print(current)
-    #     result.append([a[k] for k in current])
-    # print(result)
-                
-            
+    return result        
 
 # x = FP_Growth([["I1","I2","I5"],["I2","I4"],["I2","I3"],["I1","I2","I4"],["I1","I3"],["I2","I3"],["I1","I3"],["I1","I2","I3","I5"],["I1","I2","I3"]],3)           
 
