@@ -7,7 +7,7 @@ def Eclat(R,minsup):
             E = {} #current frequent itemset
             for xi,yi in R.items():
                 if xi!=x and yi!=y:
-                    #calculate the tidset of X={x:y} | Y={xi:yi}
+                    #calculate the tidset of X | Y = X{x:y} | Y{xi:yi}
                     if len(yi)>= minsup:
                         x_splited = x.split(",")
                         xi_splited = xi.split(",")
