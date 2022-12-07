@@ -1,0 +1,7 @@
+https://www.section.io/engineering-education/introduction-to-frequent-itemset-mining-with-python/
+https://www.section.io/engineering-education/apriori-algorithm-in-python/
+https://www.philippe-fournier-viger.com/spmf/Apriori.php
+https://www.softwaretestinghelp.com/fp-growth-algorithm-data-mining/
+https://viblo.asia/p/khai-pha-du-lieu-va-lop-bai-toan-khai-thac-cac-tap-pho-bien-p2-m68Z0W06KkG
+http://www.philippe-fournier-viger.com/spmf/FPGrowth.php
+https://www.semanticscholar.org/paper/An-efficient-parallel-FP-Growth-algorithm-Chen-Gao/1f8dd4242399b3cde9ce416db5e295f9f5b76b90
