@@ -27,8 +27,11 @@ def generate_intersection(a):
         r.sort() 
     return result
 
-print(Apriori_TID([["T1","T4","T5","T7","T8","T9"],
+result = Apriori_TID([["T1","T4","T5","T7","T8","T9"],
                             ["T1","T2","T3","T4","T6","T8","T9"],
                             ["T3","T5","T6","T7","T8","T9"],
                             ["T2","T4"],
-                            ["T1","T8"]],2))
+                            ["T1","T8"]],2)
+print()
+print("Final result:")
+print(result)
