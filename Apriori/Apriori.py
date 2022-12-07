@@ -51,7 +51,7 @@ def generate_set(a,b):
 x = Apriori([["I1","I2","I5"],["I2","I4"],["I2","I3"],["I1","I2","I4"],["I1","I3"],["I2","I3"],["I1","I3"],["I1","I2","I3","I5"],["I1","I2","I3"]],2)
 print(x)
 
-######RunningTime###
+#####RunningTime###
 # import time
 # import pylab
 # import random 
