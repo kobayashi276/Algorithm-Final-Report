@@ -8,11 +8,9 @@ def Apriori(D,minsup):
         for y in x:
             if [y] not in F:
                 F.append([y])
-                elements.append(y)
-                
+                elements.append(y)         
     F.sort()
     elements.sort()
-    
     #Start checking how many subset in mother set D
     L=[]
     while F != []:
@@ -31,7 +29,6 @@ def Apriori(D,minsup):
         if L==[]:
             break
         F = generate_set(L,elements)
-        
     return preL
 
 #Input: 2 list, a is matrix list and b is single list
