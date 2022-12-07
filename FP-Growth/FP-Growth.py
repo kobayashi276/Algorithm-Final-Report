@@ -101,8 +101,7 @@ def paring(a,b):
 #Output: item set of r
 def generate_subitemset(s,r):
     result = []
-    re
-                currentPos[j]=currentPos[j-sult.append(s[:r]) #store the min value
+    result.append(s[:r]) #store the min value
     #generate the list of position from 0 to r-1
     position = [i for i in range(0,len(s))]
     #current position to count
@@ -122,7 +121,8 @@ def generate_subitemset(s,r):
         #start to increase by 1
         if i!=r-1:
             currentPos[i]=currentPos[i]+1
-            for j in range(i+1,r):1]+1
+            for j in range(i+1,r):
+                currentPos[j]=currentPos[j-1]+1
         else:
             currentPos[i]=currentPos[i]+1
         #print(currentPos)
