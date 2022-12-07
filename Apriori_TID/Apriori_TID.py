@@ -90,32 +90,33 @@ def generate_set(L1,L2):
                     result.append(tmp)
     return result            
 
-# x = Apriori_TID({"T1":["1","3","4"],"T2":["2","3","5"],"T3":["1","2","3","5"],"T4":["2","5"]},2)
-# print()
-# print("Final result:")
-# print(x)
-import time
-import random 
-import pylab
+x = Apriori_TID({"T1":["1","3","4"],"T2":["2","3","5"],"T3":["1","2","3","5"],"T4":["2","5"]},2)
+print()
+print("Final result:")
+print(x)
 
-N = []
-for i in range(6,50):
-  D = {}
-  for j in range(i):
-    D[j] = list([str((random.randint(0, 50))) for k in range (i)])
-  N.append(D)
-# print(N)
-import time
-def measure_time(func, N):
-    runtime = []
-    for n in N:
-        start = time.time()
-        f = func(n,2)
-        stop = time.time()
-        runtime.append(stop-start)
-    return runtime
+# import time
+# import random 
+# import pylab
 
-rtime = measure_time(Apriori_TID, N)
-rtime2 = [t*1.5 for t in rtime]
-pylab.plot(N, rtime, N, rtime2)
-pylab.legend(['1','2'])
+# N = []
+# for i in range(6,50):
+#   D = {}
+#   for j in range(i):
+#     D[j] = list([str((random.randint(0, 50))) for k in range (i)])
+#   N.append(D)
+# # print(N)
+# import time
+# def measure_time(func, N):
+#     runtime = []
+#     for n in N:
+#         start = time.time()
+#         f = func(n,2)
+#         stop = time.time()
+#         runtime.append(stop-start)
+#     return runtime
+
+# rtime = measure_time(Apriori_TID, N)
+# rtime2 = [t*1.5 for t in rtime]
+# pylab.plot(N, rtime, N, rtime2)
+# pylab.legend(['1','2'])
