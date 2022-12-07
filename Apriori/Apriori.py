@@ -5,7 +5,7 @@ def Apriori(D,minsup):
     F=[]
     elements=[]
     for x in D:
-        for y in x:z
+        for y in x:
             if [y] not in F:
                 F.append([y])
                 elements.append(y)         
