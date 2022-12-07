@@ -15,8 +15,9 @@ def Apriori(D,minsup):
     
     #Start checking how many subset in mother set D
     L=[]
+    result = []
     while F != []:
-        preL = L #previous L
+        result.append(L) #add L to result
         L = [] #current L
         #for each element in F start count how many subset in mother set D
         for x in F:
@@ -32,7 +33,7 @@ def Apriori(D,minsup):
             break
         F = generate_set(L,elements)
         
-    return preL
+    return result
 
 #Input: 2 list, a is matrix list and b is single list
 #Output: itemset of 2 list
@@ -49,27 +50,27 @@ def generate_set(a,b):
       
 #####MAIN#####
 
-# x = Apriori([["I1","I2","I5"],["I2","I4"],["I2","I3"],["I1","I2","I4"],["I1","I3"],["I2","I3"],["I1","I3"],["I1","I2","I3","I5"],["I1","I2","I3"]],2)
-# print(x)
+x = Apriori([["I1","I2","I5"],["I2","I4"],["I2","I3"],["I1","I2","I4"],["I1","I3"],["I2","I3"],["I1","I3"],["I1","I2","I3","I5"],["I1","I2","I3"]],2)
+print(x)
 
 ######RunningTime###
-import time
-import pylab
-import random 
-N = []
-for i in range(6,100):
-  D = []
-  for j in range(i):
-    D.append([str((random.randint(0, 50))) for k in range (i)])
-  N.append(D)
-fuct = []
-for n in N:
-  start = time.time()
-  minsup = int(0.2*len(n))
-  f = Apriori(n,minsup)
-  stop = time.time()
-  fuct.append(stop-start)
-pylab.xlabel('Data')
-pylab.ylabel('Time')
-pylab.plot(list(range(94)), fuct)
-pylab.legend(['Apriori'])
+# import time
+# import pylab
+# import random 
+# N = []
+# for i in range(6,100):
+#   D = []
+#   for j in range(i):
+#     D.append([str((random.randint(0, 50))) for k in range (i)])
+#   N.append(D)
+# fuct = []
+# for n in N:
+#   start = time.time()
+#   minsup = int(0.2*len(n))
+#   f = Apriori(n,minsup)
+#   stop = time.time()
+#   fuct.append(stop-start)
+# pylab.xlabel('Data')
+# pylab.ylabel('Time')
+# pylab.plot(list(range(94)), fuct)
+# pylab.legend(['Apriori'])
